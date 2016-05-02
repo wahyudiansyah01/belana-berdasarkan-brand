@@ -61,8 +61,8 @@ and open the template in the editor.
             #apple{
                 position: relative;
                 background-color: pink;
-                 width: 300px;
-   height: 300px;
+                 width: 285px;
+   height: 285px;
   border-radius:100%;
   overflow: hidden;
    float: left;
@@ -73,14 +73,35 @@ and open the template in the editor.
                 margin-top:30px;
                 
                 background-color:aquamarine;
-                 width: 300px;
-   height: 300px;
+                 width: 285px;
+   height: 285px;
   border-radius:100%;
   overflow: hidden;
-   float: none;
+   float: left;
     box-shadow: 0 1px 0 0 rgba(255,255,255,.4) inset, 0 -1px 0 0 rgba(255,255,255,.3) inset, 0 1px 4px 0 rgba(0,0,0,.35);
             }
-            
+             #sony{
+                position: relative;
+                background-color: #74d3ed;
+                 width: 285px;
+   height: 285px;
+  border-radius:100%;
+  overflow: hidden;
+   float: left;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.4) inset, 0 -1px 0 0 rgba(255,255,255,.3) inset, 0 1px 4px 0 rgba(0,0,0,.35);
+            }
+              #intel{
+                position: relative;
+                margin-top:30px;
+                
+                background-color:lightslategrey;
+                 width: 285px;
+   height: 285px;
+  border-radius:100%;
+  overflow: hidden;
+   float: left;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.4) inset, 0 -1px 0 0 rgba(255,255,255,.3) inset, 0 1px 4px 0 rgba(0,0,0,.35);
+            }
             
         </style>
         <script>
@@ -98,10 +119,14 @@ $(window).bind('scroll',function(e){
 });
 function parallaxScroll(){
     var scrolled = $(window).scrollTop();
-    $('#apple span').css('top',(30+(scrolled*1))+'px');
-     $('#apple img').css('bottom',(10+(scrolled*.5))+'px');
-      $('#samsung img').css('top',(10+(scrolled*1))+'px');
-     $('#samsung span').css('bottom',(50+(scrolled*.5))+'px');
+    $('#apple span').css('top',(30-(scrolled*1))+'px');
+     $('#apple img').css('bottom',(10-(scrolled*.5))+'px');
+      $('#samsung img').css('top',(10-(scrolled*1))+'px');
+     $('#samsung span').css('bottom',(50-(scrolled*.5))+'px');
+       $('#sony span').css('top',(30-(scrolled*1))+'px');
+     $('#sony img').css('bottom',(40-(scrolled*1))+'px');
+       $('#intel img').css('top',(30-(scrolled*1))+'px');
+     $('#intel span').css('bottom',(40-(scrolled*1))+'px');
 }
 
 </script>
@@ -110,16 +135,28 @@ function parallaxScroll(){
     <body>
         <div class="container">
             <div id="apple" >
-                <span style="position: absolute;top: 50px;left:50px;width: 100px;text-align: justify;">Apple ›
+                <span style="position: absolute;top: 50px;left:40px;width: 100px;text-align: justify;">Apple ›
 
 Explore Apple’s latest, from iPhones and iPads to Macs and Apple TV.</span>
                 <img style="position: absolute;bottom: 10px;right: 10px;width: 150px" src="img/apple1.png">
             </div>
              <div id="samsung" >
-                <span style="position: absolute;bottom: 50px;left:50px;width: 100px;text-align: justify;">Samsung ›
+                <span style="position: absolute;bottom: 40px;left:40px;width: 100px;text-align: justify;">Samsung ›
 
 Discover the next big thing for every activity and every room.</span>
                 <img style="position: absolute;top: 10px;right: 10px;width: 150px" src="img/samsung1.png">
+            </div>
+             <div id="sony" >
+                <span style="position: absolute;top: 30px;right: 15%;width: 200px;text-align: center;">Sony ›
+
+Find it all here, from the most 4K movies to stunning home theater and gaming.</span>
+                <img style="position: absolute;bottom: 40px;left:40px;width: 200px" src="img/sony1.png">
+            </div>
+               <div id="intel" >
+                <span style="position: absolute;bottom: 40px;left:40px;width: 200px;text-align: center;">Intel ›
+
+Play, work, listen, watch, connect. See everything Intel makes possible.</span>
+                <img style="position: absolute;top: 30px;right: 15%;width: 200px" src="img/intel1.png">
             </div>
             
             
